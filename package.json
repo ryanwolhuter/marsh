@@ -1,0 +1,17 @@
+{
+  "name": "marsh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sass/custom.scss",
+  "scripts": {
+    "build": "node-sass --output-style expanded --include-path=node_modules/bulma sass/custom.scss css/custom.css",
+    "start": "npm run build -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^0.7.4",
+    "node-sass": "^4.12.0"
+  }
+}
