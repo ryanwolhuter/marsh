@@ -5,31 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/custom.css">
+  <script src="js/main.js"></script>
   <title>Marsh</title>
 </head>
 <body>
   <!-- navbar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a href="#home">
+      <a href="#home" class="navbar-item">
         <img src="images/icons/marsh-logo.png" alt="marsh-logo" width="48" height="48">
       </a>
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="#navigation-menu">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div id="navigation-menu" class="navbar-menu">
-        <a class="navbar-item" href="#marsh1">marsh1</a>
-        <a class="navbar-item" href="#marsh2">marsh2</a>
-        <a class="navbar-item" href="#marsh3">marsh3</a>
-        <a class="navbar-item" href="#marsh4">marsh4</a>
-        <a class="navbar-item" href="#marsh5">marsh5</a>
-        <a class="navbar-item" href="#marsh6">marsh6</a>
-        <a class="navbar-item" href="#contact">Order</a>
+
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Marshmallows
+          </a>
+          <div class="navbar-dropdown">
+            <a href="marsh1" class="navbar-item">Marsh1</a>
+            <a href="marsh2" class="navbar-item">Marsh2</a>
+            <a href="marsh3" class="navbar-item">Marsh3</a>
+            <a href="marsh4" class="navbar-item">Marsh4</a>
+            <a href="marsh5" class="navbar-item">Marsh5</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="#contact" class="button is-primary">Contact</a>
+            <a href="#contact" class="button is-light">Order</a>
+          </div>
+        </div>
+      </div>
     </div>
-    </nav>
+  </nav>
   <!-- end navbar -->
   <section id="home">
     <h1>Home</h1>
