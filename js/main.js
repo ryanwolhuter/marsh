@@ -16,4 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+    var modals = document.querySelectorAll('.modal');
+    var modalButtons = document.querySelectorAll('.open-modal-button');
+    var modalClose = document.querySelectorAll('.close-modal-button');
+    if (modalButtons.length > 0) {
+        modalButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                document.getElementById(this.dataset.target).classList.add('is-active');
+            });
+        });
+    }
+    if (modalClose.length > 0) {
+        modalClose.forEach(function (closeButton) {
+            closeButton.addEventListener('click', function () {
+                modals.forEach(function (modal) {
+                    modal.classList.remove('is-active');
+                });
+            });
+        });
+    }
 });

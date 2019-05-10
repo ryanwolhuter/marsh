@@ -20,4 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
+
+  const modals = document.querySelectorAll('.modal')
+  const modalButtons = document.querySelectorAll('.open-modal-button')
+  const modalClose = document.querySelectorAll('.close-modal-button')
+
+  if (modalButtons.length > 0) {
+    modalButtons.forEach(button => {
+      button.addEventListener('click', function (this: HTMLAnchorElement | HTMLButtonElement) {
+        document.getElementById(this.dataset.target).classList.add('is-active')
+      })
+    })
+  }
+
+  if (modalClose.length > 0) {
+    modalClose.forEach(closeButton => {
+      closeButton.addEventListener('click', function () {
+        modals.forEach(modal => {
+          modal.classList.remove('is-active')
+        })
+      })
+    })
+  }
 })
